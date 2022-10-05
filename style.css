@@ -1,0 +1,279 @@
+:root{
+    background-color: #23272E;
+    --first-color: #FFF;
+    --second-color: rgb(165, 160, 160);
+    --selector-color: #84b6f4;
+}
+html{
+    font-family: ui-sans-serif,system-ui,Helvetica Arial,sans-serif,Color,Symbol,Color;
+}
+body{
+    margin: 0;
+}
+/* Color Primario */
+#name, #rol, #titleProyects{
+    color: var(--first-color)
+}
+/* Color Secundario */
+#eslogan, .aDirection{
+    color: var(--second-color);
+}
+.title{
+    font-size: 32px;
+    color: var(--first-color);
+}
+main{
+    max-width: 680px;
+    min-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+nav{
+    width: 100%;
+    padding: 30px 0px 70px 0;
+    display: flex;
+    font-size: 18px;
+}
+#primerSalto{
+    display: none;
+}
+#principal{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px;
+}
+#description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 32px;
+}
+#photo{
+    float: right;
+    filter: grayscale();
+    margin-top: 2px;
+    width: 150px;
+    border-radius: 999999px;
+    box-shadow: 2px 5px 5px -5px rgba(0,0,0,0.75);
+}
+#photo:hover{
+    transition: 1s;
+    filter: none;
+}
+#name{
+    margin-top: 0;
+    margin-bottom: 4px;
+    line-height: 1;
+    display: block;
+    font-size: 46px;
+}
+#rol{
+    margin: 5px 0;
+    font-size: 24px;
+    font-weight: 50;
+}
+#eslogan{
+    margin: 5px 0;
+    font-size: 16px;
+}
+.icon{
+    width: 30px;
+    margin-top: 15px;
+    margin-left: 1px;
+    margin-right: 15px;
+    filter: invert(.5);
+}
+.icon:hover{
+    transition: .4s;
+    filter: invert(.9);
+}
+.aDirection{
+    text-decoration: none;
+    padding-right: 30px;
+    font-size: 20px;
+}
+.aDirection:hover{
+    transition: .9s;
+    color: var(--selector-color);
+}
+#proyectos{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#listaProyectos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cajaProyecto{
+    width: 200px;
+    height: 200px;
+    border: solid 3px #84b6f4;
+    border-radius: 10px;
+    padding-top: 10px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 20px;
+}
+.cajaProyecto:hover{
+    transition: .4s;
+    background-color: #e9e4dc;
+    color: #23272E;
+}
+#sobreMi{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: var(--second-color);
+}
+#photoZonaTrabajo{
+    float: right;
+    width: 350px;
+    height: 200px;
+    margin-left: 15px;
+    margin-top: 6px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px -5px rgba(0,0,0,0.75);
+}
+#contacto{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: var(--second-color);
+}
+.parrafoSobreMi{
+    padding-right: 5px;
+    line-height: 1.2;
+    margin-top: 1px;
+}
+footer{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+footer hr{
+    width: 100%;
+    border-color: var(--second-color)
+}
+#enlacesFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#enlacesFooter div{
+    display: flex;
+    flex-direction: column;
+}
+.aFooter{
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--second-color);
+}
+.aFooter:hover{
+    transition: .9s;
+    color: var(--selector-color);
+}
+@media (max-width: 690px) {
+    main{
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+    nav{
+        width: 100%;
+        padding: 5px 0 50px 0;
+        justify-content: space-evenly;
+    }
+    .aDirection{
+        transition: 1s;
+        padding-right: 0;
+        font-size: 20px;
+    }
+    #eslogan{
+        width: 300px;
+    }
+    #segundoSalto{
+        display: none;
+    }
+    #listaProyectos{
+        flex-direction: column;
+    }
+    .cajaProyecto{
+        transition: 1s;
+        width: auto;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 590px) {
+    .title{
+        font-size: 28px;
+    }
+    #proyectos{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    #sobreMi{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        max-width: 400px;
+    }
+    #photoZonaTrabajo{
+        float: none;
+        width: 100%;
+        margin-bottom: 15px;
+        margin-left: 0;
+    }
+}
+@media (max-width: 525px) {
+    nav{
+        padding-bottom: 50px;
+    }
+    .aDirection{
+        font-size: 20px;
+    }
+    #primerSalto, #segundoSalto{
+        display: block;
+    }
+    #principal{
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+    #photo{
+        float: none;
+    }
+    #description{
+        width: auto;
+        padding: 0;
+    }
+    #primerBloque{
+        width: 100%;
+    }
+    #eslogan{
+        width: auto;
+        padding: 0;
+    }
+    .title{
+        font-size: 24px;
+    }
+    .parrafoSobreMi{
+        max-width: 390px;
+    }
+    footer{
+        margin-top: 5px;
+    }
+}
