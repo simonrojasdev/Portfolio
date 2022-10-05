@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Simón Rojas</title>
 </head>
-<body>
+<body ondragstart="return false">
     <main>
         <nav>
             <a class="aDirection" href="#">Home</a>
@@ -16,7 +16,7 @@
         </nav>
         <section id="principal">
             <div id="contentImgPerfil">
-                <img id="photo" src="/img/photoPerfil.jpg" alt="Simón Rojas"></img>
+                <img id="photo" src="/img/photoPerfil.jpg" alt="Simón Rojas">
             </div>
             <div id="description">
                 <div id="primerBloque">
@@ -54,13 +54,25 @@
                 <h2 class="title" id="titleSobreMi">Sobre mí</h2>
                 <article>
                     <img id="photoZonaTrabajo" src="/img/photoZonaTrabajo.jpg" alt="Zona de Trabajo">
-                    <p class="parrafoSobreMi">Mi nombre es Simón Rojas, soy un informático desarrollador, con mucha pasión hacia la tecnología, muy emprendedor y con mucha dedicación.</p>
-                    <p class="parrafoSobreMi">Luego de un gran camino de estudios y capacitaciones. En este año 2022, empecé mi recorrido en el sector laboral, en la empresa Tivenos, ocupando el puesto de Desarrollador Web.</p>
+                    <p class="parrafoSobreMi">Mi nombre es Simón A. Rojas Bosco, soy un informático desarrollador, con mucha pasión hacia la tecnología, muy emprendedor y con mucha dedicación.</p>
+                    <p class="parrafoSobreMi">Luego de un gran camino de estudios y capacitaciones, en este 2022 empecé mi recorrido en el sector laboral, en la empresa Tivenos, ocupando el puesto de Desarrollador Web.</p>
                     <p class="parrafoSobreMi">Actualmente sigo en constante aprendizaje. El aprender es algo que me apasiona, siempre en busca de las nuevas tecnologías y de nuevos proyectos.</p>
                     <p class="parrafoSobreMi">Si buscas a un profesional, con dedicación y con ganas de dar soluciones, ¡cuenta conmigo!.</p>
                 </article>
             </div>
         </section>
+        <form action="POST" id="contacto" autocomplete="off" data-netlify="true">
+            <div>
+                <h2 class="title" id="titleFormulario">Contacto</h2>
+            </div>
+            <section id="sectionInput">
+                <input class="input" type="text" name="nombre" placeholder="Tu nombre">
+                <input class="input" type="email" name="email" id="email" placeholder="Tu email">
+                <input class="input" type="text" name="asunto" placeholder="Asunto">
+                <textarea class="input" name="mensaje" id="" cols="20" rows="5" placeholder="Mensaje"></textarea>
+            </section>
+            <button id="submit" type="submit">Enviar</button>
+        </form>
         <footer>
             <hr>
                 <section id="enlacesFooter">

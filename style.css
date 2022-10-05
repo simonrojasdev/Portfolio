@@ -9,6 +9,13 @@ html{
 }
 body{
     margin: 0;
+    cursor: default;
+}
+p::selection, h1::selection, h2::selection, i::selection, a::selection{
+    background-color: var(--second-color);
+}
+br::selection, img::selection{
+    background-color: transparent;
 }
 /* Color Primario */
 #name, #rol, #titleProyects{
@@ -105,6 +112,7 @@ nav{
     display: flex;
     flex-direction: column;
     width: 100%;
+    color: var(--first-color);
 }
 #listaProyectos{
     display: flex;
@@ -118,7 +126,6 @@ nav{
     border-radius: 10px;
     padding-top: 10px;
     text-align: center;
-    color: #FFF;
     font-weight: bold;
     font-size: 20px;
 }
@@ -126,6 +133,7 @@ nav{
     transition: .4s;
     background-color: #e9e4dc;
     color: #23272E;
+    cursor: pointer;
 }
 #sobreMi{
     margin-top: 30px;
@@ -145,10 +153,47 @@ nav{
 }
 #contacto{
     margin-top: 30px;
-    display: flex;
-    flex-direction: row;
     width: 100%;
     color: var(--second-color);
+}
+#sectionInput{
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    margin-bottom: 30px;
+    border: solid 2px #84b6f4;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    color: var(--second-color);
+    background-color: transparent;
+    outline: none;
+}
+.input:hover{
+    transition: .4s;
+    background-color: #e9e4dc;
+    cursor: pointer;
+}
+.input:focus{
+    color: #23272E;
+    background-color: #e9e4dc;
+    border-radius: 3px;
+}
+textarea{
+    resize: none;
+}
+#submit{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    width: 200px;
+    height: 25px;
+    background-color: var(--second-color);
+}
+#submit:hover{
+    transition: .4s;
+    background-color: var(--first-color);
 }
 .parrafoSobreMi{
     padding-right: 5px;
