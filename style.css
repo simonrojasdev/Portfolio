@@ -162,7 +162,7 @@ nav{
 }
 .input{
     margin-bottom: 30px;
-    border: solid 2px #84b6f4;
+    border: solid 2px var(--second-color);
     border-radius: 5px;
     font-weight: bold;
     font-size: 14px;
@@ -174,11 +174,13 @@ nav{
 .input:hover{
     transition: .4s;
     background-color: #e9e4dc;
+    border: solid 2px var(--selector-color);
     cursor: pointer;
 }
 .input:focus{
     color: #23272E;
     background-color: #e9e4dc;
+    border: solid 2px var(--selector-color);
     border-radius: 3px;
 }
 textarea{
@@ -201,12 +203,12 @@ textarea{
     margin-top: 1px;
 }
 footer{
-    margin-top: 30px;
     margin-bottom: 20px;
     text-align: center;
     width: 100%;
 }
 footer hr{
+    margin-top: 50px;
     width: 100%;
     border-color: var(--second-color)
 }
@@ -281,6 +283,11 @@ footer hr{
         width: 100%;
         margin-bottom: 15px;
         margin-left: 0;
+    }
+    #contacto{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
     }
 }
 @media (max-width: 525px) {
