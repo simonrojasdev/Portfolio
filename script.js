@@ -1,19 +1,31 @@
-console.log("Enlazado")
+const form = document.querySelector("#contacto");
+let msjEnvio = document.querySelector("#msjEnvio");
+console.log(form)
 
-const buttonCV = document.getElementById("cv");
-const iframe = document.querySelectorAll("#iframe");
-
-function hide() {
-    myFunction(this);
-    timeoutID = window.setTimeout(() => myFunction(this), 2000);
-  }
-
-function mostrarBlock(elemento){
-    if (elemento.style.display == "none"){
-        elemento.style.display = "block";
-    }else{
-        elemento.style.display = "none";
-    }
-}
-
-
+form.addEventListener("submit", (event)=>{
+    Array.from(document.querySelectorAll(".validar")).forEach(elemento =>{
+        error = false;
+        if(elemento.id === "campBot"){
+            if(elemento.value !== ""){
+                error = true;
+                console.log("entra aquí, eres un bot");
+            }
+        }
+        if(elemento.id === "inputEmail"){
+            if((/^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/).test(oneField.value) == false){
+                error = true;
+                alert("MAIL INVALIDO")
+            }
+        }
+        else{
+            if(oneField.value == ""){
+                error = true;
+            }
+        }
+        if(error == true){
+            event.preventDefault();
+        }else{
+            msjEnvio.document.write("Gracias, su mensaje fue enviado con exito")
+        }
+    })
+})

@@ -230,6 +230,9 @@ footer hr{
     transition: .9s;
     color: var(--selector-color);
 }
+.oculto{
+    display: none;
+}
 @media (max-width: 690px) {
     main{
         align-items: center;

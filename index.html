@@ -62,17 +62,23 @@
                 </article>
             </div>
         </section>
-        <form action="POST" id="contacto" autocomplete="off" data-netlify="true">
-            <div>
-                <h2 class="title" id="titleFormulario">Contacto</h2>
-            </div>
-            <section id="sectionInput">
-                <input class="input" type="text" name="nombre" placeholder="Tu nombre">
-                <input class="input" type="email" name="email" id="email" placeholder="Tu email">
-                <input class="input" type="text" name="asunto" placeholder="Asunto">
-                <textarea class="input" name="mensaje" id="" cols="20" rows="5" placeholder="Mensaje"></textarea>
-            </section>
-            <button id="submit" type="submit">Enviar</button>
+        <form name="contactoPortfolio" method="POST" id="contacto" autocomplete="off" data-netlify="true" netlify-honeypot="campoBot">
+                <div>
+                    <h2 class="title" id="titleFormulario">Contacto</h2>
+                </div>
+                <section id="sectionInput">
+                    <p class="oculto">
+                        <label>
+                          No llenes esto si eres humano: <input id="campBot" name="campoBot" class="validar"/>
+                        </label>
+                    </p>
+                    <input id="inputNombre" class="input validar" type="text" name="nombre" placeholder="Tu nombre">
+                    <input id="inputEmail" class="input validar" type="email" name="email" id="email" placeholder="Tu email">
+                    <input id="inputAsunto" class="input validar" type="text" name="asunto" placeholder="Asunto">
+                    <textarea id="inputMensaje" class="input validar" name="mensaje" id="" cols="20" rows="5" placeholder="Mensaje"></textarea>
+                    <p id="msjEnvio"></p>
+                </section>
+                <button id="submit" type="submit">Enviar</button>
         </form>
         <footer>
             <hr>
