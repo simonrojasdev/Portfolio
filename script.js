@@ -1,6 +1,5 @@
 const form = document.querySelector("#contacto");
 let msjEnvio = document.querySelector("#msjEnvio");
-console.log(form)
 
 form.addEventListener("submit", (event)=>{
     Array.from(document.querySelectorAll(".validar")).forEach(elemento =>{
@@ -8,24 +7,24 @@ form.addEventListener("submit", (event)=>{
         if(elemento.id === "campBot"){
             if(elemento.value !== ""){
                 error = true;
-                console.log("entra aquí, eres un bot");
+               alert("entra aquí, eres un bot");
             }
         }
-        if(elemento.id === "inputEmail"){
+        else if(elemento.id === "inputEmail"){
             if((/^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/).test(oneField.value) == false){
                 error = true;
-                alert("MAIL INVALIDO")
+                alert("Email invalido o vacio")
             }
         }
-        else{
-            if(oneField.value == ""){
+        else if(elemento.value == "" || elemento.value == "-None-"){
                 error = true;
-            }
-        }
-        if(error == true){
-            event.preventDefault();
-        }else{
-            msjEnvio.document.write("Gracias, su mensaje fue enviado con exito")
+                alert("Algun campo esta vacio")
         }
     })
+    if(error === true){
+        event.preventDefault();
+        alert("Por favor rellene el formulario antes de enviar");
+    }else{
+        alert("Gracias, su mensaje fue enviado");
+    }
 })
