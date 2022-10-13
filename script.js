@@ -20,8 +20,11 @@ form.addEventListener("submit", (event)=>{
     })
     if(error === true){
         event.preventDefault();
-        alert("Por favor rellene el formulario antes de enviar");
     }else{
-        form.setAttribute('action', alert("Gracias, su mensaje fue enviado correctamente"))
+        form.setAttribute('action', 'javascript:void(0);')
+        msjEnvio.style.display = "block";
+        Array.from(document.querySelectorAll(".validar")).forEach(elemento =>{
+            elemento.value = "";
+        })
     }
 })

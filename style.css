@@ -233,6 +233,9 @@ footer hr{
 .oculto{
     display: none;
 }
+#msjEnvio{
+    color: var(--selector-color);
+}
 @media (max-width: 690px) {
     main{
         align-items: center;
