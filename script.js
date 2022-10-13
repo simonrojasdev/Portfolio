@@ -21,7 +21,7 @@ form.addEventListener("submit", (event)=>{
     if(error === true){
         event.preventDefault();
     }else{
-        form.setAttribute('action', 'javascript:void(0);')
+        form.setAttribute('action', 'javascript:location.reload();')
         msjEnvio.style.display = "block";
         Array.from(document.querySelectorAll(".validar")).forEach(elemento =>{
             elemento.value = "";
