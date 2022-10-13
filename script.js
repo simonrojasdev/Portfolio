@@ -22,8 +22,5 @@ form.addEventListener("submit", (event)=>{
         event.preventDefault();
     }else{
         msjEnvio.style.display = "block";
-        Array.from(document.querySelectorAll(".validar")).forEach(elemento =>{
-            elemento.value = "";
-        })
     }
 })
