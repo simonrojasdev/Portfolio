@@ -1,10 +1,6 @@
 const form = document.querySelector("#contacto");
 let msjEnvio = document.querySelector("#msjEnvio");
 
-function redireccionar(){
-    form.setAttribute('action', '/index.html#titleFormulario');
-}
-
 form.addEventListener("submit", (event)=>{
     Array.from(document.querySelectorAll(".validar")).forEach(elemento =>{
         error = false;
@@ -26,8 +22,5 @@ form.addEventListener("submit", (event)=>{
         event.preventDefault();
     }else{
         msjEnvio.innerHTML = "Gracias, su mensaje fue enviado correctamente.";
-        setTimeout(function(){
-            redireccionar();
-            }, 5000);
     }
 })
