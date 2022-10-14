@@ -183,8 +183,9 @@ nav{
     border: solid 2px var(--selector-color);
     border-radius: 3px;
 }
-textarea{
+#inputMensaje{
     resize: none;
+    margin-bottom: 0;
 }
 #submit{
     border: 1px solid transparent;
@@ -234,7 +235,10 @@ footer hr{
     display: none;
 }
 #msjEnvio{
-    color: var(--selector-color);
+    font-size: 12px;
+    color: var(--second-color);
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 @media (max-width: 690px) {
     main{
