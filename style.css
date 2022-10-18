@@ -1,14 +1,16 @@
 :root{
     --color-fondo: #23272E;
     --first-color: #FFF;
-    --second-color: rgb(165, 160, 160);
+    --second-color: #a5a0a0;
     --selector-color: #84b6f4;
+    --fondoBox-color: #e9e4dc;
 }
 [tema="light"]{
     --first-color: #000000;
     --color-fondo: #ffffff;
-    --second-color: rgb(117, 109, 109);
-    --selector-color: #1874e4;
+    --second-color: #838383;
+    --selector-color: #5198ee;
+    --fondoBox-color: #e9e4dc;
 }
 
 html{
@@ -177,7 +179,7 @@ nav{
 }
 .cajaProyecto:hover{
     transition: .4s;
-    background-color: #e9e4dc;
+    background-color: var(--fondoBox-color);
     color: #23272E;
     cursor: pointer;
 }
