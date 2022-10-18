@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.tabs.enableAnimation": true,
+    "workbench.editor.highlightModifiedTabs": false,
+    "workbench.editor.scrollToSwitchTabs": true,
+    "workbench.editor.showTabs": false
+}

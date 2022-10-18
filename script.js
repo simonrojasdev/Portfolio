@@ -1,6 +1,20 @@
 const form = document.querySelector("#contacto");
 const msjEnvio = document.querySelector("#msjEnvio");
 const buttonSubmit = document.querySelector("#submit");
+const buttonLigth = document.querySelector("#buttonLigth");
+const buttonDark = document.querySelector("#buttonDark");
+const html = document.querySelector("html");
+
+function temaLight(){
+    html.setAttribute('tema', 'light');
+    buttonDark.hidden = false;
+    buttonLigth.hidden = true;
+}
+function temaDark(){
+    html.setAttribute('tema', 'dark');
+    buttonDark.hidden = true;
+    buttonLigth.hidden = false;
+}
 
 form.addEventListener("submit", (event)=>{
     let error = false;
@@ -31,9 +45,5 @@ form.addEventListener("submit", (event)=>{
         msjEnvio.style.color = "#84b6f4";
         msjEnvio.innerHTML = "Gracias, su mensaje fue enviado correctamente."
     }
-});
-
-buttonSubmit.addEventListener("click", function(){
-    
 });
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" tema="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <title>Simón Rojas</title>
 </head>
+
 <body ondragstart="return false">
     <main>
         <nav>
-            <a class="aDirection" href="#">Home</a>
-            <a class="aDirection" href="#titleProyectos">Proyectos</a>
-            <a class="aDirection" href="#titleSobreMi">Sobre mí</a>
-            <a class="aDirection" href="#titleFormulario">Contacto</a>
+            <span>
+                <a class="aDirection" href="#">Home</a>
+                <a class="aDirection" href="#titleProyectos" >Proyectos</a>
+                <a class="aDirection" href="#titleSobreMi">Sobre mí</a>
+                <a class="aDirection" href="#titleFormulario">Contacto</a> 
+            </span>
+            <span>
+                <button id="buttonLigth" class="iconMode" onclick="temaLight()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zm64 0c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256z"/></svg>
+                </button>
+                <button id="buttonDark" class="iconMode" onclick="temaDark()" hidden>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zm64 0c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256z"/></svg>
+                </button>
+            </span>
         </nav>
         <section id="principal">
             <div id="contentImgPerfil">
@@ -23,13 +34,45 @@
                 <div id="primerBloque">
                     <h2 id="name">Simón Rojas</h2>
                     <h1 id="rol">Web Developer</h1>
-                    <p id="eslogan"><i>"Cualquier duda puede ser resuelta...<br id="primerSalto"> Siempre con dedicación y ganas <br id="segundoSalto">de encontrar la repuesta."</i></p>
+                    <p id="eslogan"><i>"Cualquier duda puede ser resuelta...<br id="primerSalto"> Siempre con dedicación
+                            y ganas <br id="segundoSalto">de encontrar la repuesta."</i></p>
                 </div>
                 <div>
                     <div id="divRedes">
-                        <a href="https://www.linkedin.com/in/simonarb/" target="_blank" rel="noopener noreferrer"><img class="icon" src="/svg/linkedin.svg" alt="Linkedin"></a>
-                        <a href="https://github.com/simonrojasdev" target="_blank" rel="noopener noreferrer"><img class="icon" src="/svg/square-github.svg" alt="Github"></a>
-                        <a id="cv" href="/files/simon-rojas-cv.pdf" target="_blank" rel="noopener noreferrer"><img class="icon" src="/svg/cv.svg" alt="Curriculum Vitaes"></a>
+                        <a class="aIcon" href="https://www.linkedin.com/in/simonarb/" target="_blank"
+                            rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                            </svg></a>
+                        <a class="aIcon" href="https://github.com/simonrojasdev" target="_blank"
+                            rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z" />
+                            </svg></a>
+                        <a id="cv" class="aIcon" href="/files/simon-rojas-cv.pdf" target="_blank"
+                            rel="noopener noreferrer"><svg viewBox="0 0 448 512" version="1.1" id="svg4"
+                                sodipodi:docname="cv.svg" inkscape:export-filename="cv.svg" inkscape:export-xdpi="96"
+                                inkscape:export-ydpi="96" inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+                                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                <defs id="defs8" />
+                                <sodipodi:namedview id="namedview6" pagecolor="#ffffff" bordercolor="#000000"
+                                    borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0"
+                                    inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" showgrid="false"
+                                    inkscape:zoom="1.0585938" inkscape:cx="123.74908" inkscape:cy="308.90037"
+                                    inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="-8"
+                                    inkscape:window-y="1" inkscape:window-maximized="1" inkscape:current-layer="svg4" />
+                                -->
+                                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path id="path2"
+                                    d="M 31.900391 32 C 14.300442 32 -1.6579314e-14 46.500835 0 64.300781 L 0 447.69922 C 0 465.49916 14.300442 480 31.900391 480 L 416 480 C 433.59994 480 448 465.49916 448 447.69922 L 448 64.300781 C 448 46.500835 433.59994 32 416 32 L 31.900391 32 z M 128.32812 114.03906 C 156.7866 114.03906 182.43501 124.3298 200.00195 143.25 C 201.40731 144.90967 202.10937 146.90098 202.10938 148.89258 C 202.10937 151.21612 201.05553 153.53965 199.29883 155.53125 L 183.83984 170.80078 C 182.08317 172.46045 180.32678 173.45508 178.21875 173.45508 C 176.11072 173.45508 173.65123 172.46035 171.89453 170.46875 C 161.00302 159.183 146.24663 152.875 128.67969 152.875 C 102.32928 152.875 80.195312 175.11525 80.195312 201.66992 L 80.195312 272.37305 C 80.195312 298.92772 102.32928 321.16602 128.67969 321.16602 C 146.24663 321.16602 161.00302 314.85997 171.89453 303.57422 C 173.65123 301.58262 175.75914 300.58594 177.86719 300.58594 C 179.97522 300.58594 182.08317 301.58252 183.83984 303.24219 L 199.29883 318.51172 C 201.40686 320.50332 202.46094 322.82685 202.46094 325.15039 C 202.46094 327.14199 201.75886 328.80127 200.35352 330.46094 C 182.78656 349.38115 157.13793 360.00391 128.32812 360.00391 C 78.086698 360.00391 37.332031 320.83535 37.332031 272.37305 L 37.332031 201.66992 C 37.332031 153.20762 78.086698 114.03906 128.32812 114.03906 z M 216.72852 118.35547 L 241.32227 118.35547 C 246.24101 118.35547 250.80949 121.34121 252.21484 125.98828 L 309.13086 299.25977 L 366.04883 125.98828 C 367.45418 121.34121 372.02071 118.35547 376.93945 118.35547 L 402.23633 118.35547 C 407.15508 118.35547 410.66797 121.67314 410.66797 125.98828 C 410.66797 126.65214 410.6697 127.64873 410.31836 128.64453 L 334.07617 350.04492 C 332.67081 354.36006 328.10429 357.34766 323.18555 357.34766 L 295.78125 357.34766 C 290.8625 357.34766 286.29402 354.36006 284.88867 350.04492 L 208.64844 128.64453 C 208.2971 127.64873 208.29688 126.65214 208.29688 125.98828 C 208.29687 121.67314 211.80977 118.35547 216.72852 118.35547 z M 81.035156 396.32617 L 366.96484 396.32617 L 366.96484 420.00195 L 81.035156 420.00195 L 81.035156 396.32617 z " />
+                                <g aria-label="CV" transform="matrix(0.96127415,0,0,0.90818052,13.111208,23.064266)"
+                                    id="text412"
+                                    style="font-weight:bold;font-size:365.494px;font-family:'Miriam Libre';-inkscape-font-specification:'Miriam Libre, Bold';fill:#ffffff;stroke-width:5.71083" />
+                            </svg></a>
                     </div>
                 </div>
             </div>
@@ -55,48 +98,59 @@
                 <h2 class="title" id="titleSobreMi">Sobre mí</h2>
                 <article>
                     <img id="photoZonaTrabajo" src="/img/photoZonaTrabajo.jpg" alt="Zona de Trabajo">
-                    <p class="parrafoSobreMi">Mi nombre es Simón A. Rojas Bosco, soy un informático desarrollador, con mucha pasión hacia la tecnología, muy emprendedor y con mucha dedicación.</p>
-                    <p class="parrafoSobreMi">Luego de un gran camino de estudios y capacitaciones, en este 2022 empecé mi recorrido en el sector laboral, en la empresa Tivenos, ocupando el puesto de Desarrollador Web.</p>
-                    <p class="parrafoSobreMi">Actualmente sigo en constante aprendizaje. El aprender es algo que me apasiona, siempre en busca de las nuevas tecnologías y de nuevos proyectos.</p>
-                    <p class="parrafoSobreMi">Si buscas a un profesional, con dedicación y con ganas de dar soluciones, ¡cuenta conmigo!.</p>
+                    <p class="parrafoSobreMi">Mi nombre es Simón A. Rojas Bosco, soy un informático desarrollador, con
+                        mucha pasión hacia la tecnología, muy emprendedor y con mucha dedicación.</p>
+                    <p class="parrafoSobreMi">Luego de un gran camino de estudios y capacitaciones, en este 2022 empecé
+                        mi recorrido en el sector laboral, en la empresa Tivenos, ocupando el puesto de Desarrollador
+                        Web.</p>
+                    <p class="parrafoSobreMi">Actualmente sigo en constante aprendizaje. El aprender es algo que me
+                        apasiona, siempre en busca de las nuevas tecnologías y de nuevos proyectos.</p>
+                    <p class="parrafoSobreMi">Si buscas a un profesional, con dedicación y con ganas de dar soluciones,
+                        ¡cuenta conmigo!.</p>
                 </article>
             </div>
         </section>
-        <form name="contactoPortfolio" method="POST" action="/index.html#titleFormulario" id="contacto" autocomplete="off" data-netlify="true" netlify-honeypot="campoBot">
-                <div>
-                    <h2 class="title" id="titleFormulario">Contacto</h2>
-                </div>
-                <section id="sectionInput">
-                    <p class="oculto">
-                        <label for="campBot">No llenes esto si eres humano: <input id="campBot" name="campoBot" class="validar"/></label>
-                    </p>
-                    <input id="inputNombre" class="input validar" type="text" name="nombre" placeholder="Tu nombre">
-                    <input id="inputEmail" class="input validar" type="email" name="email" placeholder="Tu email">
-                    <input id="inputAsunto" class="input validar" type="text" name="asunto" placeholder="Asunto">
-                    <textarea id="inputMensaje" class="input validar" name="mensaje" id="" cols="20" rows="5" placeholder="Mensaje"></textarea>
-                    <p id="msjEnvio">Todos los campos son obligatorios</p>
-                </section>
-                <button id="submit" type="submit">Enviar</button>
+        <form name="contactoPortfolio" method="POST" action="/index.html#titleFormulario" id="contacto"
+            autocomplete="off" data-netlify="true" netlify-honeypot="campoBot">
+            <div>
+                <h2 class="title" id="titleFormulario">Contacto</h2>
+            </div>
+            <section id="sectionInput">
+                <p class="oculto">
+                    <label for="campBot">No llenes esto si eres humano: <input id="campBot" name="campoBot"
+                            class="validar" /></label>
+                </p>
+                <input id="inputNombre" class="input validar" type="text" name="nombre" placeholder="Tu nombre">
+                <input id="inputEmail" class="input validar" type="email" name="email" placeholder="Tu email">
+                <input id="inputAsunto" class="input validar" type="text" name="asunto" placeholder="Asunto">
+                <textarea id="inputMensaje" class="input validar" name="mensaje" id="" cols="20" rows="5"
+                    placeholder="Mensaje"></textarea>
+                <p id="msjEnvio">Todos los campos son obligatorios</p>
+            </section>
+            <button id="submit" type="submit">Enviar</button>
         </form>
         <footer>
             <hr>
-                <section id="enlacesFooter">
-                    <div>
-                        <a class="aFooter" href="#">Home</a>
-                        <a class="aFooter" href="#titleProyectos">Proyectos</a>
-                    </div>
-                    <div>
-                        <a class="aFooter" href="#titleSobreMi">Sobre mí</a>
-                        <a class="aFooter" href="#titleFormulario">Contacto</a>
-                    </div>
-                    <div>
-                        <a class="aFooter" href="https://www.linkedin.com/in/simonarb/" target="_blank" rel="noopener noreferrer">Linkedin</a>
-                        <a class="aFooter" href="https://github.com/simonrojasdev" target="_blank" rel="noopener noreferrer">Github</a>
-                    </div>
-                    <div>
-                        <a class="aFooter" href="/files/simon-rojas-cv.pdf" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a>
-                    </div>
-                </section>  
+            <section id="enlacesFooter">
+                <div>
+                    <a class="aFooter" href="#">Home</a>
+                    <a class="aFooter" href="#titleProyectos">Proyectos</a>
+                </div>
+                <div>
+                    <a class="aFooter" href="#titleSobreMi">Sobre mí</a>
+                    <a class="aFooter" href="#titleFormulario">Contacto</a>
+                </div>
+                <div>
+                    <a class="aFooter" href="https://www.linkedin.com/in/simonarb/" target="_blank"
+                        rel="noopener noreferrer">Linkedin</a>
+                    <a class="aFooter" href="https://github.com/simonrojasdev" target="_blank"
+                        rel="noopener noreferrer">Github</a>
+                </div>
+                <div>
+                    <a class="aFooter" href="/files/simon-rojas-cv.pdf" target="_blank"
+                        rel="noopener noreferrer">Curriculum Vitae</a>
+                </div>
+            </section>
         </footer>
     </main>
 </body>
