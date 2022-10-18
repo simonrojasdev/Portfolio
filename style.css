@@ -239,10 +239,11 @@ nav{
     width: 200px;
     height: 25px;
     background-color: var(--second-color);
+    cursor: pointer;
 }
 #submit:hover{
     transition: .4s;
-    background-color: var(--first-color);
+    background-color: var(--selector-color);
 }
 .parrafoSobreMi{
     padding-right: 5px;
