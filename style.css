@@ -12,7 +12,15 @@
     --selector-color: #5198ee;
     --fondoBox-color: #e9e4dc;
 }
-
+*{
+    margin: 0;
+    padding: 0;
+}
+span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 html{
     font-family: ui-sans-serif,system-ui,Helvetica Arial,sans-serif,Color,Symbol,Color;
     scroll-behavior: smooth;
@@ -37,6 +45,8 @@ br::selection, img::selection{
     color: var(--second-color);
 }
 .title{
+    margin-top: 50px;
+    margin-bottom: 30px;
     font-size: 32px;
     color: var(--first-color);
 }
@@ -101,19 +111,18 @@ nav{
     filter: none;
 }
 #name{
-    margin-top: 0;
-    margin-bottom: 4px;
-    line-height: 1;
+    line-height: .8;
+    margin-bottom: 20px;
     display: block;
-    font-size: 46px;
+    font-size: 48px;
 }
 #rol{
-    margin: 5px 0;
+    margin-bottom: 20px;
     font-size: 24px;
     font-weight: 50;
 }
 #eslogan{
-    margin: 5px 0;
+    margin: 10px 0;
     font-size: 16px;
 }
 .aIcon{
@@ -134,17 +143,6 @@ nav{
 .aIcon:hover{
     color: var(--selector-color);
     transition: .4s;
-}
-.icon{
-    width: 30px;
-    margin-top: 15px;
-    margin-left: 1px;
-    margin-right: 15px;
-    filter: invert(.5);
-}
-.icon:hover{
-    transition: .4s;
-    filter: invert(.9);
 }
 .aDirection{
     text-decoration: none;
@@ -366,6 +364,19 @@ footer hr{
     }
     #photo{
         float: none;
+        margin-bottom: 40px;
+        width: 200px;
+    }
+    .aIcon{
+        margin: 0;
+        padding: 0;
+        width: 34px;
+    }
+    #rol{
+        font-size: 26px;
+    }
+    #eslogan{
+        font-size: 18px;
     }
     #description{
         width: auto;
