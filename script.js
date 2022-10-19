@@ -1,19 +1,16 @@
 const form = document.querySelector("#contacto");
 const msjEnvio = document.querySelector("#msjEnvio");
 const buttonSubmit = document.querySelector("#submit");
-const buttonLigth = document.querySelector("#buttonLigth");
-const buttonDark = document.querySelector("#buttonDark");
+const buttonMode = document.querySelector("#buttonMode");
 const html = document.querySelector("html");
 
 function temaLight(){
     html.setAttribute('tema', 'light');
-    buttonDark.hidden = false;
-    buttonLigth.hidden = true;
+    buttonMode.setAttribute('onclick', 'temaDark()')
 }
 function temaDark(){
     html.setAttribute('tema', 'dark');
-    buttonDark.hidden = true;
-    buttonLigth.hidden = false;
+    buttonMode.setAttribute('onclick', 'temaLight()')
 }
 
 form.addEventListener("submit", (event)=>{

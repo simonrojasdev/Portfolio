@@ -65,23 +65,6 @@ nav{
     font-size: 18px;
     justify-content: space-between;
 }
-.iconMode{
-    margin: 0;
-    padding: 0;
-    width: 30px;
-    background: none;
-    border: none;
-    color: var(--second-color);
-    cursor: pointer;
-}
-.iconMode svg{
-    fill: currentColor;
-    width: 30px;
-}
-.iconMode:hover{
-    color: var(--selector-color);
-    transition: .4s;
-}
 #primerSalto{
     display: none;
 }
@@ -152,6 +135,22 @@ nav{
 .aDirection:hover{
     transition: .9s;
     color: var(--selector-color);
+}
+.iconMode{
+    display: flex;
+    margin: auto;
+    background: none;
+    border: none;
+    color: var(--second-color);
+    cursor: pointer;
+}
+.iconMode svg{
+    fill: currentColor;
+    width: 30px;
+}
+.iconMode:hover{
+    color: var(--selector-color);
+    transition: .4s;
 }
 #proyectos{
     margin-top: 30px;
@@ -301,7 +300,6 @@ footer hr{
     }
     .aDirection{
         transition: 1s;
-        padding-right: 15px;
         font-size: 20px;
     }
     #eslogan{
