@@ -248,6 +248,12 @@ nav{
     padding-right: 5px;
     line-height: 1.2;
     margin-top: 1px;
+    margin-bottom: 15px;
+}
+#ultimoParrafo{
+    padding-right: 5px;
+    line-height: 1.2;
+    margin-top: 30px;
 }
 footer{
     margin-bottom: 20px;
