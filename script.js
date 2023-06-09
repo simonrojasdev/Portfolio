@@ -3,6 +3,15 @@ const msjEnvio = document.querySelector("#msjEnvio");
 const buttonSubmit = document.querySelector("#submit");
 const buttonMode = document.querySelector("#buttonMode");
 const html = document.querySelector("html");
+const cajaProyecto = document.querySelectorAll(".cajaLogro");
+
+cajaProyecto.forEach(caja => {
+    caja.addEventListener('click', () => {
+      if(!caja.classList.contains("disabled")){
+        console.log(caja)
+      }
+    });
+  });
 
 function temaLight(){
     html.setAttribute('tema', 'light');

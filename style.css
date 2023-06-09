@@ -37,7 +37,7 @@ br::selection, img::selection{
     background-color: transparent;
 }
 /* Color Primario */
-#name, #rol, #titleProyects{
+#rol, #titleProyects{
     color: var(--first-color)
 }
 /* Color Secundario */
@@ -60,7 +60,7 @@ main{
 }
 nav{
     width: 100%;
-    padding: 30px 0px 70px 0;
+    padding: 30px 0px 80px 0;
     display: flex;
     font-size: 18px;
     justify-content: space-between;
@@ -94,10 +94,9 @@ nav{
     filter: none;
 }
 #name{
-    line-height: .8;
-    margin-bottom: 20px;
     display: block;
-    font-size: 48px;
+    width: 260px;
+    color: var(--svgColor);
 }
 #rol{
     margin-bottom: 20px;
@@ -105,7 +104,7 @@ nav{
     font-weight: 50;
 }
 #eslogan{
-    margin: 10px 0;
+    margin: 15px 0;
     font-size: 16px;
 }
 .aIcon{
@@ -152,36 +151,68 @@ nav{
     color: var(--selector-color);
     transition: .4s;
 }
-#proyectos{
-    margin-top: 30px;
+#logros{
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     width: 100%;
     color: var(--first-color);
 }
-#listaProyectos{
+#listaLogros{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
 }
-.cajaProyecto{
-    width: 200px;
+.cajaLogro{
+    width: auto;
     height: 200px;
     border: solid 3px var(--selector-color);
     border-radius: 10px;
-    padding-top: 10px;
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 30px;
 }
-.cajaProyecto:hover{
+.cajaLogro:hover{
     transition: .4s;
     background-color: var(--fondoBox-color);
     color: #23272E;
-    cursor: pointer;
+    
+}
+.imagen-difuminada {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+.imagenLogro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+.imagenLogro:hover{
+    transform: scale(1.1);
+    transform-origin: center center;
+}
+
+.titulo-logro {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    text-align: center;
+}
+.textoTarjeta {
+    margin: 0;
+    color: white;
 }
 #sobreMi{
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -314,10 +345,10 @@ footer hr{
     #segundoSalto{
         display: none;
     }
-    #listaProyectos{
+    #listaLogros{
         flex-direction: column;
     }
-    .cajaProyecto{
+    .cajaLogro{
         transition: 1s;
         width: auto;
         height: 150px;
@@ -328,7 +359,7 @@ footer hr{
     .title{
         font-size: 28px;
     }
-    #proyectos{
+    #logros{
         flex-direction: column;
         text-align: center;
         justify-content: center;
@@ -387,7 +418,10 @@ footer hr{
         padding: 0;
     }
     #primerBloque{
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     #eslogan{
         width: auto;
